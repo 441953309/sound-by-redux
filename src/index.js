@@ -4,6 +4,10 @@ import { Provider } from 'react-redux';
 import configureStore from './stores';
 import App from './containers/App';
 
+import 'normalize.css'
+import './styles/main.scss'
+
+
 const store = configureStore();
 
 render(
