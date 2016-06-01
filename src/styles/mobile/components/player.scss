@@ -23,5 +23,37 @@
   z-index: 0;
 }
 
-.mobile-player-content{
+.mobile-player-extras {
+  flex: 1;
 }
+
+.mobile-player-content {
+  display: flex;
+  position: relative;
+  padding: 10px;
+  color: #fff;
+  z-index: 2;
+}
+
+.mobile-player-info {
+  flex: 1;
+  overflow: hidden;
+}
+
+.mobile-player-controls {
+  display: flex;
+  width: 140px;
+}
+
+
+.mobile-player-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 20px;
+}
+
+.mobile-player-user {
+  color: #9c9e9f;
+}
+

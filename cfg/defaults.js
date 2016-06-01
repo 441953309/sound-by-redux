@@ -1,14 +1,18 @@
 'use strict';
+var precss = require('precss');
+var autoprefixer = require('autoprefixer');
+
 const path = require('path');
 const srcPath = path.join(__dirname, '/../src');
 const dfltPort = 8000;
+
 function getDefaultModules() {
   return {
     preLoaders: [{
-        test: /\.(js|jsx)$/,
-        include: srcPath,
-        loader: 'eslint-loader'
-      }],
+      test: /\.(js|jsx)$/,
+      include: srcPath,
+      loader: 'eslint-loader'
+    }],
     loaders: [
       {
         test: /\.css$/,
@@ -47,6 +51,6 @@ module.exports = {
   port: dfltPort,
   getDefaultModules: getDefaultModules,
   postcss: function () {
-    return [];
+    return [precss, autoprefixer];
   }
 };
