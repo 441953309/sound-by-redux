@@ -25,7 +25,11 @@ class App extends Component {
         </div>
       );
     } else {
-      return <Main/>;
+      return (
+        <div className="mobile" style={{width: `${width}px`, height: `${height}px`}}>
+          <PlayerContainer />
+        </div>
+      )
     }
 
   }

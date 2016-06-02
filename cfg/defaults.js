@@ -1,5 +1,4 @@
 'use strict';
-var precss = require('precss');
 var autoprefixer = require('autoprefixer');
 
 const path = require('path');
@@ -35,7 +34,7 @@ function getDefaultModules() {
         loader: 'style-loader!css-loader!postcss-loader!stylus-loader'
       },
       {
-        test: /\.(png|jpg|gif|woff|woff2)$/,
+        test: /\.(png|jpg|gif|woff|woff2|eot|ttf|svg)$/,
         loader: 'url-loader?limit=8192'
       },
       {
@@ -51,6 +50,6 @@ module.exports = {
   port: dfltPort,
   getDefaultModules: getDefaultModules,
   postcss: function () {
-    return [precss, autoprefixer];
+    return [autoprefixer];
   }
 };

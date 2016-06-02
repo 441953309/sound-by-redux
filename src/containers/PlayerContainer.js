@@ -6,9 +6,7 @@ import MobilePlayer from '../components/MobilePlayer'
 class PlayerContainer extends Component {
   render() {
     const {isMobile} = this.props;
-    if(isMobile){
-      return <MobilePlayer {...this.props}/>
-    }
+    return <MobilePlayer {...this.props}/>
   }
 }
 
